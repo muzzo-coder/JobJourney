@@ -1,0 +1,90 @@
+body {
+    background-color: #f7f8fc;
+    color: #2e2e48;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  section {
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  section:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* 🎯 Resume Analysis - Indigo Theme */
+  section.resume-analysis {
+    background: #eef2ff;
+    border-left: 6px solid #6366f1;
+  }
+  .resume-analysis h2 {
+    color: #4f46e5;
+  }
+  
+  /* 💼 Job Suggestions - Green Theme */
+  section.job-suggestions {
+    background: #ecfdf5;
+    border-left: 6px solid #10b981;
+  }
+  .job-suggestions h2 {
+    color: #059669;
+  }
+  
+  /* 📚 Course Recommendations - Amber Theme */
+  section.course-suggestions {
+    background: #fffbea;
+    border-left: 6px solid #f59e0b;
+  }
+  .course-suggestions h2 {
+    color: #d97706;
+  }
+  
+  /* 🧭 Career Guidance - Violet Theme */
+  section.career-guidance {
+    background: #f5f3ff;
+    border-left: 6px solid #a855f7;
+  }
+  .career-guidance h2 {
+    color: #9333ea;
+  }
+  
+  /* List styling */
+  ul li {
+    background: #ffffff;
+    color: #333;
+    padding: 0.9rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.6rem;
+    border: 1px solid #e5e7eb;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  ul li:hover {
+    background: #f9fafb;
+    transform: translateX(5px);
+  }
+  
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

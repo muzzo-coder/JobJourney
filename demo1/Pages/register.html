@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Job Finder</title>
+  <meta name="description" content="Create your Job Finder account" />
+  <meta name="keywords" content="job finder, register, sign up, resume builder" />
+  <meta name="author" content="Job Finder Team" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/register-style.css" />
+</head>
+<body>
+  <div class="register-container">
+    <h1 class="register-title">Create Account</h1>
+    <form id="register-form" class="register-form">
+      <div>
+        <label for="email" class="register-label">Email</label>
+        <input type="email" id="email" name="email" required class="register-input" placeholder="you@example.com" />
+      </div>
+      <div>
+        <label for="password" class="register-label">Password</label>
+        <input type="password" id="password" name="password" required class="register-input" placeholder="Create password" />
+      </div>
+      <div>
+        <label for="confirm-password" class="register-label">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required class="register-input" placeholder="Confirm password" />
+      </div>
+      <button type="submit" class="register-button">Register</button>
+    </form>
+    <p class="register-footer-text">Already have an account?
+      <a href="sign.html" class="register-link">Sign In</a>
+    </p>
+    <div class="register-darkmode-toggle">
+      <button onclick="toggleDarkMode()" class="register-toggle-btn">Toggle Dark Mode</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="../javascript/register-script.js"></script>
+</body>
+</html>

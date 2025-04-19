@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Job Finder</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Job Finder helps you create a resume and get matched with top jobs based on your profile." />
+  <meta name="keywords" content="Job Finder, resume builder, job search, tech jobs, career" />
+  <meta name="author" content="Mujjamil Sofi" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDROKX7RFmE8D9OsXkeP5wAE6a_M3AZM8M",
+      authDomain: "jobjourney-c2004.firebaseapp.com",
+      projectId: "jobjourney-c2004",
+      storageBucket: "jobjourney-c2004.appspot.com",
+      messagingSenderId: "320771012154",
+      appId: "1:320771012154:web:49d2e36d29c9d9e6cbe703",
+      measurementId: "G-6212RFXN3W"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="https://storage.googleapis.com/a1aa/image/ws3tlC7fXmE9uYi57DyV24KVvxSRkJjGGSEBAARCDa8.jpg" alt="Logo" class="logo" />
+    </div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#premium">Premium</a>
+      <button onclick="window.location.href='Pages/sign.html'" class="sign-in-btn">Sign In</button>
+    </nav>
+  </header>
+
+  <main class="main-content" id="home">
+    <h1 class="main-heading">Create your resume and find your next job</h1>
+    <button id="getStartedBtn" class="get-started-btn">Get Started</button>
+
+    <section id="how-it-works" class="section">
+      <h2>How it works</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://storage.googleapis.com/a1aa/image/e8XL85sea8TOJzYYMxvVAeKxvkN2EgLp66NlJz19WhU.jpg" alt="Build Resume">
+          <h3>Build Your Resume</h3>
+          <p>Create a professional resume in minutes using our builder.</p>
+        </div>
+        <div class="card">
+          <img src="https://storage.googleapis.com/a1aa/image/kEqOgq3D-1YWLkXgk1dhCx8deFpy_YOq1o-Z-CQrzQM.jpg" alt="Browse Jobs">
+          <h3>Browse Job Listings</h3>
+          <p>Find jobs that match your skills and preferences.</p>
+        </div>
+        <div class="card">
+          <img src="https://storage.googleapis.com/a1aa/image/bFuaR4738e_bKhURGDWifBMSkBkv3TbcDUX_Qopm45g.jpg" alt="Get Matched">
+          <h3>Get Matched</h3>
+          <p>Receive personalized job recommendations.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="smart-companion" class="smart-companion">
+    <h2>🔍 Smart Career Companion</h2>
+    <p>AI-powered tools to supercharge your career journey.</p>
+    
+    <div class="grid">
+      <div class="card">
+        <h3>Resume Analyzer</h3>
+        <p>Get your resume scored and improved using AI.</p>
+      </div>
+      <div class="card">
+        <h3>Job Fit & Skill Match</h3>
+        <p>Get jobs matched with your top skills and profile.</p>
+      </div>
+      <div class="card">
+        <h3>Learning Recommendations</h3>
+        <p>Courses to bridge your skill gaps and get job-ready.</p>
+      </div>
+      <div class="card">
+        <h3>Career Guidance</h3>
+        <p>Not sure what to pursue? Take our smart quiz and discover your path.</p>
+      </div>
+      <div class="card">
+        <h3>Career Tracker</h3>
+        <p>Track your skills, jobs applied, and learning journey.</p>
+      </div>
+    </div>
+    <a href="Pages/career-guidance.html" class="cta-button">Get Started</a>
+  </section>
+
+  <section id="testimonials" class="section testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Job Finder helped me land a remote job quickly!"</p>
+        <strong>— Aisha, Software Developer</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"The resume builder and job matches are amazing."</p>
+        <strong>— Rahul, Data Analyst</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"The platform is super simple and effective."</p>
+        <strong>— Sneha, UX Designer</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="jobs" class="section jobs">
+    <h2>Featured Jobs</h2>
+    <div class="job-grid">
+      <div class="job-card">
+        <h3>Frontend Developer</h3>
+        <p>Remote · $60k–$80k ·
+::contentReference[oaicite:0]{index=0}
+Startup Inc.</p>
+        <a href="#" class="apply-link">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Backend Engineer</h3>
+        <p>New York · $90k–$110k · TechWorks</p>
+        <a href="#" class="apply-link">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Data Scientist</h3>
+        <p>Remote · $100k–$120k · AI Labs</p>
+        <a href="#" class="apply-link">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Job Finder | Built with 💼 by Mujjamil Sofi</p>
+  </footer>
+
+  <script>
+    document.getElementById("getStartedBtn").addEventListener("click", function () {
+      window.location.href = "Pages/resume-form.html";
+    });
+  </script>
+</body>
+</html>

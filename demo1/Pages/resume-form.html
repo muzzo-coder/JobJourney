@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder - Enhanced Form</title>
+  <link rel="stylesheet" href="../css/resume-form.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 text-gray-800">
+  <div class="max-w-4xl mx-auto p-6 mt-10 bg-white rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">Build Your Resume</h1>
+    <form id="resumeForm" class="space-y-8">
+
+      <!-- Personal Information -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Personal Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <input type="url" name="linkedin" placeholder="LinkedIn Profile" />
+          <input type="url" name="portfolio" placeholder="Portfolio/GitHub" />
+        </div>
+        <textarea name="summary" rows="3" placeholder="Profile Summary (Optional)" class="w-full mt-4"></textarea>
+      </div>
+
+      <!-- Education -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Education</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input type="text" name="degree" placeholder="Degree (e.g., B.Tech)" />
+          <input type="text" name="field" placeholder="Field of Study" />
+          <input type="text" name="institution" placeholder="Institution Name" />
+          <input type="text" name="grade" placeholder="CGPA/Grade" />
+          <input type="date" name="edu_start" placeholder="Start Date" />
+          <input type="date" name="edu_end" placeholder="End Date" />
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Skills</h2>
+        <textarea name="skills" rows="2" placeholder="List your skills separated by commas (e.g., HTML, CSS, JS, React)" class="w-full"></textarea>
+      </div>
+
+      <!-- Work Experience -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Work Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input type="text" name="jobTitle" placeholder="Job Title" />
+          <input type="text" name="company" placeholder="Company Name" />
+          <input type="text" name="location" placeholder="Location" />
+          <input type="date" name="exp_start" placeholder="Start Date" />
+          <input type="date" name="exp_end" placeholder="End Date" />
+        </div>
+        <textarea name="experience" rows="3" placeholder="Job Description / Responsibilities" class="w-full mt-4"></textarea>
+      </div>
+
+      <!-- Projects -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Projects</h2>
+        <input type="text" name="projectName" placeholder="Project Title" class="w-full mb-2" />
+        <input type="url" name="projectLink" placeholder="Project Link (Optional)" class="w-full mb-2" />
+        <textarea name="projectDesc" rows="3" placeholder="Describe the project..." class="w-full"></textarea>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Certifications</h2>
+        <input type="text" name="certification" placeholder="Certification Name" class="w-full mb-2" />
+        <input type="text" name="certIssuer" placeholder="Issued By" class="w-full mb-2" />
+        <input type="date" name="certDate" class="w-full" />
+      </div>
+
+      <!-- Languages -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Languages</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input type="text" name="language" placeholder="Language" />
+          <select name="proficiency">
+            <option value="">Select Proficiency</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Fluent</option>
+            <option>Native</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div>
+        <h2 class="text-xl font-semibold text-blue-600 mb-4">Interests & Hobbies</h2>
+        <textarea name="interests" rows="2" placeholder="E.g., Coding, Reading, Traveling" class="w-full"></textarea>
+      </div>
+
+      <div class="text-center mt-8">
+        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Preview Resume</button>
+      </div>
+    </form>
+  </div>
+  <script src="../javascript/resume-form.js"></script>
+</body>
+</html>

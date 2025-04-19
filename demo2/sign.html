@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to Job Finder platform" />
+  <meta name="keywords" content="job finder, login, sign in, resume builder, career" />
+  <meta name="author" content="Job Finder Team" />
+  <title>Sign In - Job Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-blue-900 dark:bg-gray-900 flex items-center justify-center min-h-screen text-white">
+  <div class="bg-blue-800 dark:bg-gray-800 rounded-xl shadow-lg p-8 w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center mb-6">Sign In</h1>
+    <form action="#" method="POST" class="space-y-4">
+      <div>
+        <label for="email" class="block mb-1 text-sm">Email</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-blue-700 dark:bg-gray-700 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="you@example.com" />
+      </div>
+      <div>
+        <label for="password" class="block mb-1 text-sm">Password</label>
+        <input type="password" id="password" name="password" required class="w-full px-4 py-2 rounded bg-blue-700 dark:bg-gray-700 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="••••••••" />
+      </div>
+      <div class="flex justify-between items-center text-sm">
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" class="form-checkbox text-blue-600" />
+          <span>Remember me</span>
+        </label>
+        <a href="#" class="hover:underline text-blue-300">Forgot Password?</a>
+      </div>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-2 rounded transition duration-300">
+        Sign In
+      </button>
+    </form>
+    <p class="mt-6 text-center text-sm text-gray-300">Don't have an account? 
+      <a href="#" class="text-blue-400 hover:underline">Register here</a>
+    </p>
+    <div class="mt-4 text-center">
+      <button onclick="toggleDarkMode()" class="text-sm text-blue-300 hover:text-white underline">Toggle Dark Mode</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>

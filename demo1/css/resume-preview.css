@@ -1,0 +1,30 @@
+/* resume-preview.css */
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Template Styles */
+.template-classic {
+  font-family: Georgia, serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.template-modern {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+  color: #1a202c;
+}
+
+.template-elegant {
+  font-family: 'Times New Roman', serif;
+  background-color: #fdfaf6;
+  color: #4b5563;
+}
+
+/* Sticky headers styling */
+section h2 {
+  background-color: inherit;
+  z-index: 10;
+}

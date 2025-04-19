@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to Job Finder platform" />
+  <meta name="keywords" content="job finder, login, sign in, resume builder, career" />
+  <meta name="author" content="Job Finder Team" />
+  <title>Sign In - Job Finder</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/sign-style.css" />
+</head>
+<body>
+  <div class="signin-container">
+    <h1 class="signin-title">Sign In</h1>
+    <form id="signin-form" class="signin-form">
+      <div>
+        <label for="email" class="signin-label">Email</label>
+        <input type="email" id="email" name="email" required class="signin-input" placeholder="you@example.com" />
+      </div>
+      <div>
+        <label for="password" class="signin-label">Password</label>
+        <input type="password" id="password" name="password" required class="signin-input" placeholder="••••••••" />
+      </div>
+      <div class="signin-options">
+        <label class="signin-checkbox-label">
+          <input type="checkbox" class="signin-checkbox" />
+          <span>Remember me</span>
+        </label>
+        <a href="#" id="forgot-password" class="signin-link">Forgot Password?</a>
+      </div>
+      <button type="submit" id="signin-button" class="signin-button">Sign In</button>
+    </form>
+    <p class="signin-footer-text">Don't have an account?
+      <a href="#" id="register-link" class="signin-link">Register here</a>
+    </p>
+    <div class="signin-darkmode-toggle">
+      <button onclick="toggleDarkMode()" class="signin-toggle-btn">Toggle Dark Mode</button>
+    </div>
+  </div>
+
+  <!-- Toggle Dark Mode -->
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+
+  <!-- Custom Script -->
+  <script type="module" src="../javascript/sign-script.js"></script>
+</body>
+</html>
