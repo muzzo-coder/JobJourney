@@ -9,49 +9,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a2d1d5f389.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-blue-950 text-white font-[Poppins]">
+<body class="font-[Poppins]">
 
-  <header class="p-6 bg-blue-900 shadow-md">
-    <h1 class="text-3xl font-bold">🎯 Career Guidance Dashboard</h1>
+  <header>
+    <h1>🎯 Career Guidance Dashboard</h1>
   </header>
 
-  <main class="p-6 space-y-10">
+  <main class="main-container">
     
-    <!-- Resume Analysis Results -->
     <section class="resume-analysis" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-2">📄 Resume Analysis</h2>
-      <p>Resume Score: <span id="resume-score" class="font-bold text-yellow-300">Loading...</span></p>
-      <p>Skill Gaps: <span id="skill-gaps" class="text-red-300">Loading...</span></p>
+      <h2>📄 Resume Analysis</h2>
+      <p>Resume Score: <span id="resume-score">Loading...</span></p>
+      <p>Skill Gaps: <span id="skill-gaps">Loading...</span></p>
     </section>
 
-    <!-- Job Suggestions -->
     <section class="job-suggestions" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-2">💼 Job Suggestions</h2>
-      <ul id="job-suggestions" class="space-y-2 text-white/90">
+      <h2>💼 Job Suggestions</h2>
+      <ul id="job-suggestions">
         <li>Loading job recommendations...</li>
       </ul>
     </section>
 
-    <!-- Course Recommendations -->
     <section class="course-suggestions" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-2">📚 Course Recommendations</h2>
-      <ul id="course-suggestions" class="space-y-2">
+      <h2>📚 Course Recommendations</h2>
+      <ul id="course-suggestions">
         <li>Loading recommended courses...</li>
       </ul>
     </section>
 
-    <!-- Career Path Guidance -->
     <section class="career-guidance" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-2">🧭 Career Path Guidance</h2>
+      <h2>🧭 Career Path Guidance</h2>
       <p id="career-path">Analyzing your profile for best-fit paths...</p>
     </section>
 
   </main>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
+  <script>AOS.init({ duration: 1000 });</script>
   <script src="../javascript/career-guidance.js"></script>
 </body>
 </html>

@@ -1,68 +1,154 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const resumeData = JSON.parse(localStorage.getItem("resumeData")) || {};
-
-  const renderTemplates = {
-    classic: () => `
-      <div class="p-6 bg-white rounded-lg shadow">
-        <h1 class="text-4xl font-bold text-blue-700 mb-2">${resumeData.name}</h1>
-        <p class="text-gray-600 mb-4">${resumeData.email} | ${resumeData.phone} | <a href="${resumeData.linkedin}" class="text-blue-500">LinkedIn</a></p>
-        <section class="mb-4"><h2 class="text-xl font-semibold">Skills</h2><p>${resumeData.skills}</p></section>
-        <section class="mb-4"><h2 class="text-xl font-semibold">Experience</h2><p>${resumeData.experience}</p></section>
-        <section><h2 class="text-xl font-semibold">Education</h2><p>${resumeData.education}</p></section>
-      </div>
-    `,
-
-    modern: () => `
-      <div class="flex flex-col md:flex-row gap-6 bg-white rounded-lg shadow p-6">
-        <aside class="w-full md:w-1/3 bg-gray-100 p-4 rounded">
-          <h2 class="text-lg font-bold mb-2">${resumeData.name}</h2>
-          <p>${resumeData.email}<br>${resumeData.phone}</p>
-          <a href="${resumeData.linkedin}" class="text-blue-500">LinkedIn</a>
-          <hr class="my-3"/>
-          <h3 class="font-semibold">Skills</h3>
-          <p>${resumeData.skills}</p>
-        </aside>
-        <main class="w-full md:w-2/3">
-          <section class="mb-4"><h3 class="text-lg font-semibold">Experience</h3><p>${resumeData.experience}</p></section>
-          <section><h3 class="text-lg font-semibold">Education</h3><p>${resumeData.education}</p></section>
-        </main>
-      </div>
-    `,
-
-    elegant: () => `
-      <div class="bg-gray-50 p-6 rounded shadow">
-        <div class="text-center mb-6">
-          <h1 class="text-3xl font-serif font-bold">${resumeData.name}</h1>
-          <p class="text-gray-600">${resumeData.email} | ${resumeData.phone}</p>
-          <a href="${resumeData.linkedin}" class="text-blue-600">LinkedIn</a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 class="font-semibold text-lg">Skills</h3>
-            <p>${resumeData.skills}</p>
-            <h3 class="font-semibold text-lg mt-4">Education</h3>
-            <p>${resumeData.education}</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg">Experience</h3>
-            <p>${resumeData.experience}</p>
-          </div>
-        </div>
-      </div>
-    `,
-  };
-
-  const renderSelectedTemplate = (type) => {
-    document.getElementById("resumeContainer").innerHTML = renderTemplates[type]();
-    localStorage.setItem("selectedTemplate", type);
-  };
-
-  const selector = document.getElementById("templateSelect");
-  const savedTemplate = localStorage.getItem("selectedTemplate") || "classic";
-  selector.value = savedTemplate;
-  renderSelectedTemplate(savedTemplate);
-
-  selector.addEventListener("change", () => {
-    renderSelectedTemplate(selector.value);
-  });
-});
+{
+  "basics": {
+    "name": "Mujjamil Rashid Sofi",
+    "label": "Computer Engineer",
+    "picture": "https://example.com/photo.jpg",
+    "email": "mujammilsofi2@gmail.com",
+    "phone": "+91 7057686044",
+    "website": "https://thomasedison.com",
+    "summary": "Passionate and solution-driven Computer Science student with hands-on experience in full-stack development, mobile apps, and cloud integration. Proficient in Python, Java, Dart, and Firebase, with a strong portfolio including a food delivery app, messaging app clone, and an AI-powered resume builder. Known for rapid prototyping, clean UI/UX, and integrating modern technologies like AI APIs and real-time databases. Actively pursuing innovative career opportunities to build scalable tech solutions.",
+    "location": {
+      "address": "Sangmeshwar Nagar Akkalkot road ",
+      "postalCode": "413006",
+      "city": "Solapur",
+      "countryCode": "India",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "mujjamil-sofi",
+        "url": "https://www.linkedin.com/in/mujjamil-sofi"
+      },
+      {
+        "network": "Github",
+        "username": "muzzo-coder",
+        "url": "https://github.com/muzzo-coder"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Edison Electric Light Company",
+      "position": "Python Developer",
+      "website": "https://edison.com",
+      "startDate": "2025-01",
+      "endDate": "2025-02",
+      "summary": "Worked on full-stack mini projects, handled API integration, and contributed to both frontend and backend development with a focus on clean, functional code and team collaboration.",
+      "highlights": [
+        "Developed mini full-stack projects with integrated frontend and backend features",
+        "Worked on API integration, UI enhancements, and backend logic using Python",
+        "Gained hands-on experience in real-world software development and team collaboration"
+      ],
+      "name": "Virtunexa",
+      "location": "Remote",
+      "url": "https://virtunexa.com/",
+      "description": ""
+    },
+    {
+      "company": "General Electric",
+      "position": "Mobile Application Developer",
+      "website": "https://ge.com",
+      "startDate": "2022-05",
+      "endDate": "2022-07",
+      "summary": "Developed cross-platform mobile applications using Flutter. Worked on UI implementation, API integration, and state management. Collaborated with the team to deliver responsive, high-performance apps.",
+      "highlights": [
+        "Built responsive, cross-platform mobile apps using Flutter and Dart",
+        "Gained hands-on experience with real-world app deployment and debugging",
+        "Implemented clean UI designs and navigation structures"
+      ],
+      "name": "DK Techno's",
+      "location": "Solapur,India",
+      "url": "https://dktechs.in/"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "V.V.P institue of polytechnic",
+      "area": "Computer Engineering",
+      "studyType": "Diploma",
+      "startDate": "2021-9",
+      "endDate": "2024-07",
+      "gpa": "",
+      "courses": [],
+      "score": "84.63%"
+    },
+    {
+      "institution": "V.V.P Institue of Engineering And Technology",
+      "area": "Computer Science And Engineering",
+      "studyType": "B.Tech",
+      "startDate": "2024-08",
+      "endDate": "Present",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "Intermediate",
+      "keywords": [
+        "Python, Java, C, C++, Dart"
+      ]
+    },
+    {
+      "name": "Web Development",
+      "level": "Intermediate",
+      "keywords": [
+        "HTML, CSS, JavaScript, Tailwind CSS, Bootstrap"
+      ]
+    },
+    {
+      "name": "Version Control",
+      "level": "Begineer",
+      "keywords": [
+        "Git, GitHub"
+      ]
+    },
+    {
+      "name": "API Integration",
+      "level": "Begineer",
+      "keywords": [
+        "REST APIs, Firebase Authentication, Google Gemini APIs"
+      ]
+    },
+    {
+      "name": "Database",
+      "level": "Intermediate",
+      "keywords": [
+        "Firebase, SQL, MongoDB"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Marathi",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Urdu",
+      "fluency": "Intermediate"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Research and Development",
+      "keywords": [
+        "Innovations",
+        "Experimentation"
+      ]
+    }
+  ],
+  "references": []
+}

@@ -1,30 +1,259 @@
-/* resume-preview.css */
-
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* General Resume Styling */
+.resume-preview {
+  font-family: 'Arial', sans-serif;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Template Styles */
-.template-classic {
-  font-family: Georgia, serif;
-  background-color: #fff;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Classic Template */
+.classic {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.classic h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.classic p {
+  margin-bottom: 15px;
+}
+
+.classic .section {
+  margin-bottom: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.classic .section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.classic .section-content {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.classic .resume-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+/* Modern Template */
+.modern {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+.modern h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.modern p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.modern .section {
+  border-left: 4px solid #3498db;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.modern .section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.modern .section-content {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.modern .resume-header {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 15px;
+}
+
+/* Elegant Template */
+.elegant {
+  font-family: 'Georgia', serif;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.elegant h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #2c3e50;
+  padding-bottom: 15px;
+}
+
+.elegant p {
+  font-size: 1.1rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.elegant .section {
+  border-left: 3px solid #2c3e50;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.elegant .section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.elegant .section-content {
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.elegant .resume-header {
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 15px;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Alignment Controls */
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* Sidebar Controls */
+.sidebar {
+  padding: 20px;
+  border-right: 2px solid #ccc;
+  min-width: 250px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.sidebar button:hover {
+  background-color: #2980b9;
+}
+
+.sidebar select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Specific Template Borders */
+.classic .section {
+  border-top: 2px solid #bbb;
+  padding-top: 15px;
+  margin-bottom: 40px;
+}
+
+.modern .section {
+  border-left: 5px solid #3498db;
+  margin-bottom: 35px;
+}
+
+.elegant .section {
+  border-left: 4px solid #2c3e50;
+  margin-bottom: 40px;
+}
+
+.elegant h1 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modern h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.classic .section-title,
+.modern .section-title,
+.elegant .section-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.elegant .section-title,
+.modern .section-title {
+  color: #2c3e50;
+}
+
+.classic .section-title {
   color: #333;
 }
 
-.template-modern {
-  font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
-  color: #1a202c;
-}
-
-.template-elegant {
-  font-family: 'Times New Roman', serif;
-  background-color: #fdfaf6;
-  color: #4b5563;
-}
-
-/* Sticky headers styling */
-section h2 {
-  background-color: inherit;
-  z-index: 10;
-}
